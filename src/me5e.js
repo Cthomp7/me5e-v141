@@ -154,7 +154,7 @@ Actors.registerSheet('DND5E', ME5eRenegadeCharacterSheet, {
     makeDefault: false,
 });
 
-Actors.registerSheet('DND5E', ME5eCharacterSheet, {
+Actors.registerSheet('DND5E', Golorbium_Purple, {
     types: ['character'],
     makeDefault: true,
 });
