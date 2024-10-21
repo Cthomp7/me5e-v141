@@ -128,6 +128,15 @@ class ME5eRenegadeCharacterSheet extends dnd5e.applications.actor.ActorSheet5eCh
     }
 }
 
+class Golorbium_Purple extends dnd5e.applications.actor.ActorSheet5eCharacter {
+    static get defaultOptions() {
+        console.log('~~~~~~~~~~~ME5E CHARACTER SHEET ACTIVE~~~~~~~~~~~');
+        const options = super.defaultOptions;
+        options.classes.push('golorbium');
+        return options;
+    }
+}
+
 console.log(`Registering character sheets for ME5e Module`);
 
 Actors.registerSheet('DND5E', ME5eCharacterSheet, {
@@ -144,6 +153,12 @@ Actors.registerSheet('DND5E', ME5eRenegadeCharacterSheet, {
     types: ['character'],
     makeDefault: false,
 });
+
+Actors.registerSheet('DND5E', ME5eCharacterSheet, {
+    types: ['character'],
+    makeDefault: true,
+});
+
 //Other sheets
 class ME5eNPCSheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     static get defaultOptions() {
